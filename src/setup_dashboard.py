@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 from dash import Dash, dcc, html, Input, Output
-from src.cost_of_living_dashboard.preprocessing import get_df, merge_dfs, get_selected_properties, get_overall_costs, \
+from cost_of_living_dashboard.preprocessing import get_df, merge_dfs, get_selected_properties, get_overall_costs, \
     get_difference_of_overall_costs, prepare_data_for_piechart, get_overall_monthly_cost_income
 
 df = get_df()
