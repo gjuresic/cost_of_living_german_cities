@@ -45,6 +45,7 @@ fig_income_cost.update_traces(textposition='top center')
 
 app = Dash(__name__, title="Cost of Living in German Cities 🇩🇪",
            meta_tags=[{"name": "viewport", "content": "width=device-width"}])
+server = app.server
 
 app.layout = html.Div([
     html.Div([
