@@ -186,11 +186,12 @@ def get_overall_monthly_cost_income(df_merged):
         df_selected_city['weighted_price'] = df_selected_city[city] * df_selected_city['weight']
         weighted_sum_city = round(df_selected_city['weighted_price'].sum(), 0)
 
-        df_all_costs = df_all_costs._append({'City': city, 'Overall Monthly Costs': weighted_sum_city},
-                                            ignore_index=True)
+        df_all_costs = df_all_costs.append({'City': city, 'Overall Monthly Costs': weighted_sum_city},
+                                           ignore_index=True)
 
-    df_gross_income = pd.read_csv('https://raw.githubusercontent.com/gjuresic/cost_of_living_german_cities/main/src/data/'
-                                  'gross_income.csv', sep=';')
+    df_gross_income = pd.read_csv(
+        'https://raw.githubusercontent.com/gjuresic/cost_of_living_german_cities/main/src/data/'
+        'gross_income.csv', sep=';')
     df_all_costs_income = pd.merge(df_all_costs, df_gross_income, how='left', left_on=['City'], right_on=['city'])
     df_all_costs_income.drop('city', axis=1, inplace=True)
     df_all_costs_income.rename(columns={'gross_income': 'Gross Income'}, inplace=True)
