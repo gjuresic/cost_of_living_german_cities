@@ -340,9 +340,6 @@ def update_cost_one_title(city_one):
     if city_one is None:
         cost = df_all_costs['Overall Monthly Costs'].iloc[-2]
     else:
-        df_copy = df_merged.copy(deep=True)
-        df_copy_city_one = df_copy[[city_one]]
-
         df_all_costs = pd.DataFrame({'City': [city_one]})
 
     return f"Total Monthly Costs for {df_all_costs['City'].iloc[-1]}"
