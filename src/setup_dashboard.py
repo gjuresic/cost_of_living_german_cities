@@ -499,7 +499,6 @@ def update_pie_chart2(city_one):
                 'xanchor': 'right', 'x': 0.6, 'y': 0},
             margin=dict(t=30)
         )
-
     return fig
 
 
