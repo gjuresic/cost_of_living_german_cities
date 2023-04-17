@@ -6,8 +6,8 @@
 
 This project is a web application built with **Dash** and **Plotly** that displays the **Cost of Living in different German Cities**. It collects data from various sources and presents it through interactive graphs and charts.
 
-![alt text](/Users/gjuresic/Desktop/python_projects/cost_of_living_german_cities/dashboard1.png)
-![alt text](/Users/gjuresic/Desktop/python_projects/cost_of_living_german_cities/dashboard2.png)
+![alt text](https://github.com/gjuresic/cost_of_living_german_cities/blob/main/dashboard1.png)
+![alt text](https://github.com/gjuresic/cost_of_living_german_cities/blob/main/dashboard2.png)
 
 ## Installation
 You can find the dependencies in the requirements.txt file.
