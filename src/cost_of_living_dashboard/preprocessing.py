@@ -3,8 +3,8 @@ import numpy as np
 
 
 def get_df():
-    df = pd.read_csv('/Users/gjuresic/Desktop/python_projects/cost_of_living_german_cities/src/'
-                     'data/cost_of_living_data.csv')
+    df = pd.read_csv('https://github.com/gjuresic/cost_of_living_german_cities/blob/main/src/data/'
+                     'cost_of_living_data.csv')
     df.drop('Unnamed: 0', axis=1, inplace=True)
     df['price'] = df['price'].replace('?', np.nan).str.replace(',', '').astype(float)
     df['min_price'] = df['min_price'].replace('?', np.nan).str.replace(',', '').astype(float)
@@ -12,7 +12,7 @@ def get_df():
     df['price'].fillna(0, inplace=True)
     df['inserted_at'] = pd.Timestamp.today().strftime("%B %d, %Y")
 
-    df_geo = pd.read_csv('/Users/gjuresic/Desktop/python_projects/cost_of_living_german_cities/src/data/geo_data.csv')
+    df_geo = pd.read_csv('https://github.com/gjuresic/cost_of_living_german_cities/blob/main/src/data/geo_data.csv')
     df = pd.merge(df, df_geo, how='left', left_on=['city'], right_on=['city'])
     df['category'] = df['category'].replace('Apartment (3 bedrooms)', 'Buy Apartment')
     df['category'] = df['category'].replace('Internet (60 Mbps', 'Sports And Leisure')
@@ -188,7 +188,7 @@ def get_overall_monthly_cost_income(df_merged):
         df_all_costs = df_all_costs._append({'City': city, 'Overall Monthly Costs': weighted_sum_city},
                                             ignore_index=True)
 
-    df_gross_income = pd.read_csv('/Users/gjuresic/Desktop/python_projects/cost_of_living_german_cities/src/data/'
+    df_gross_income = pd.read_csv('https://github.com/gjuresic/cost_of_living_german_cities/blob/main/src/data/'
                                   'gross_income.csv', sep=';')
     df_all_costs_income = pd.merge(df_all_costs, df_gross_income, how='left', left_on=['City'], right_on=['city'])
     df_all_costs_income.drop('city', axis=1, inplace=True)
