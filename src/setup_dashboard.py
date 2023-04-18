@@ -64,8 +64,8 @@ app.layout = html.Div([
         ], className="one-half column", id="title"),
 
         html.Div([
-            html.P('Last Updated: ' + str(df['inserted_at'].iloc[-1]),
-                   style={'color': 'green', 'fontSize': 10}),
+            html.P('By Gabrijela Juresic',
+                   style={'color': 'green', 'fontSize': 15}),
 
         ], className="one-third column", id='title1'),
 
