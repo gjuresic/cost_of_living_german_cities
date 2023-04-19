@@ -11,10 +11,12 @@ This project is a web application built with **Dash** and **Plotly** that displa
 
 ## Installation
 You can find the dependencies in the requirements.txt file.
-By running the following code, you can install the dependencies: *pip install -r requirements.txt*
+By running the following code, you can install the dependencies: 
+```pip install -r requirements.txt```
 
 ## Usage
-To run the web application, navigate to the project directory and run the following command: *python app.py*
+To run the web application, navigate to the project directory and run the following command: 
+```python setup_dashboard.py```
 This will start the web server and the application will be available at http://localhost:8050/.
 
 ## Contributing
